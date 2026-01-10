@@ -1,0 +1,14 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "eslint": "^8.50.0",
+    "@typescript-eslint/parser": "^6.2.1",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "ts-node": "^10.9.1"
+  }
+}
