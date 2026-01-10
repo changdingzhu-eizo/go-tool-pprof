@@ -1,0 +1,27 @@
+name: Lint Webapp
+
+on:
+  push:
+    paths:
+      - 'webapp/**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install webapp dependencies
+        working-directory: webapp
+        run: npm ci
+
+      - name: Run ESLint
+        working-directory: webapp
+        run: npm run lint
+        continue-on-error: false
