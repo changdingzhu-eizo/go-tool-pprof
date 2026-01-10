@@ -1,4 +1,4 @@
-name: Lint Webapp
+name: Lint Webapp Push
 
 on:
   push:
@@ -13,13 +13,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
       - name: Install webapp dependencies
         working-directory: webapp
-        run: npm ci
+        run: npm install
 
       - name: Run ESLint
         working-directory: webapp
