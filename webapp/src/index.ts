@@ -1,5 +1,5 @@
 function greet(name: string) {
-  console.log('Hello, World ' + name);
+  console.log('Hello, World 1 ' + name);
 }
 
 greet('Webapp');
